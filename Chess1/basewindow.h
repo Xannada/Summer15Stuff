@@ -2,7 +2,8 @@
 #define BASEWINDOW_H
 
 #include <QMainWindow>
-#include "piece.h"
+#include "board.h"
+
 
 namespace Ui {
 class MainWindow;
@@ -11,13 +12,16 @@ class MainWindow;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
+private:
+    Ui::MainWindow *ui;
+    Board theBoard;
 
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-private:
-    Ui::MainWindow *ui;
+private slots:
+    void on_A1_clicked();
 };
 
 #endif // BASEWINDOW_H

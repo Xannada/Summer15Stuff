@@ -6,7 +6,7 @@
 struct location
 {
     int row;
-    int col;
+    char col;
 };
 
 class Piece
